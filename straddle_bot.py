@@ -282,7 +282,8 @@ class ShortStraddle(Strategy):
             if ask <= 0:
                 continue                         # no ask yet, retried on the next quote
             inst = self.cache.instrument(iid)
-            px = ask + float(inst.price_increment)   # marketable limit: ask + 1 tick
+            tick_size = 0.0005 if ask >= 0.005 else 0.0001
+            px = round(ask + tick_size, 4)
             order = self.order_factory.limit(
                 instrument_id=iid,
                 order_side=OrderSide.BUY,
