@@ -33,3 +33,10 @@ htmlcov/
 build/
 dist/
 *.egg-info/
+
+# Rust / Nautilus
+nautilus_trader/
+target/
+
+# Generated output
+catalog/

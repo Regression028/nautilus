@@ -1,0 +1,11 @@
+[package]
+name = "ema_cross_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+nautilus-backtest = { path = "../nautilus_trader/crates/backtest", features = ["examples"] }
+nautilus-execution = { path = "../nautilus_trader/crates/execution" }
+nautilus-model = { path = "../nautilus_trader/crates/model", features = ["test-support"] }
+nautilus-trading = { path = "../nautilus_trader/crates/trading", features = ["examples"] }
+anyhow = "1"
